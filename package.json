@@ -1,0 +1,32 @@
+{
+  "name": "website-auto-updater",
+  "version": "1.0.0",
+  "description": "Auto update your website in client when using SPA. 在单页面应用中自动检测网站更新",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tianfeng98/website-auto-updater"
+  },
+  "keywords": [],
+  "authors": [
+    "linktodream@163.com"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "compiled"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "father": "^4.5.1-beta.4"
+  }
+}
