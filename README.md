@@ -4,7 +4,11 @@
 [![NPM downloads](http://img.shields.io/npm/dm/website-auto-updater.svg?style=flat)](https://npmjs.com/package/website-auto-updater)
 
 <div align="center">
+
+## Auto update your website in client when using SPA
+
 **English** · [简体中文](./README.zh-CN.md)
+
 </div>
 
 ## Installation
@@ -21,7 +25,7 @@ $ pnpm add website-auto-updater
 
 ## Usage
 
-`website-auto-updater` exposes a class. Simply using in your SPA entry file.
+`website-auto-updater` exposes a class. Simply using in your SPA entry file:
 
 ```typescript
 import WebsiteAutoUpdater from "website-auto-updater";

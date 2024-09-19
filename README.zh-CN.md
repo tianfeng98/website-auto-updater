@@ -4,10 +4,14 @@
 [![NPM downloads](http://img.shields.io/npm/dm/website-auto-updater.svg?style=flat)](https://npmjs.com/package/website-auto-updater)
 
 <div align="center">
+
+## 在单页面(SPA)应用中自动检测网站更新
+
 [English](./README.md) · **简体中文**
+
 </div>
 
-## Installation
+## 安装
 
 ```bash
 $ npm install website-auto-updater
@@ -19,9 +23,9 @@ or
 $ pnpm add website-auto-updater
 ```
 
-## Usage
+## 使用
 
-`website-auto-updater` exposes a class. Simply using in your SPA entry file.
+`website-auto-updater` 导出了一个类，可以在 SPA 入口文件中直接使用：
 
 ```typescript
 import WebsiteAutoUpdater from "website-auto-updater";
@@ -29,16 +33,14 @@ import WebsiteAutoUpdater from "website-auto-updater";
 const updater = new WebsiteAutoUpdater();
 
 updater.start(() => {
-  const result = window.confirm(
-    "The website has been updated, do you want to refresh the page?"
-  );
+  const result = window.confirm("网站有更新，是否刷新页面？");
   if (result) {
     location.replace(websiteAutoUpdater.getHomeUrl(true));
   }
 });
 ```
 
-If you want the page to be automatically updated the first time it loads:
+如果你想要在首次进入网站时自动检测更新，参考如下示例：
 
 ```typescript
 import WebsiteAutoUpdater from "website-auto-updater";
@@ -53,9 +55,7 @@ websiteAutoUpdater.isWebsiteNeedUpdate().then((isNeedUpdate) => {
   } else {
     oldRender();
     websiteAutoUpdater.run(() => {
-      const result = window.confirm(
-        "The website has been updated, do you want to refresh the page?"
-      );
+      const result = window.confirm("网站有更新，是否刷新页面？");
       if (result) {
         location.replace(websiteAutoUpdater.getHomeUrl(true));
       }

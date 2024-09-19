@@ -1,7 +1,7 @@
 {
   "name": "website-auto-updater",
-  "version": "1.0.0",
-  "description": "Auto update your website in client when using SPA. 在单页面应用中自动检测网站更新",
+  "version": "1.0.1",
+  "description": "Auto update your website in client when using SPA. 在单页面应用中自动检测网站更新。",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
