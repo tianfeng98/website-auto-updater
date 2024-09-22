@@ -30,9 +30,9 @@ $ pnpm add website-auto-updater
 ```typescript
 import WebsiteAutoUpdater from "website-auto-updater";
 
-const updater = new WebsiteAutoUpdater();
+const websiteAutoUpdater = new WebsiteAutoUpdater();
 
-updater.start(() => {
+websiteAutoUpdater.run(() => {
   const result = window.confirm(
     "The website has been updated, do you want to refresh the page?"
   );

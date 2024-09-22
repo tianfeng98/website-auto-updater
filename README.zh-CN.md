@@ -30,9 +30,9 @@ $ pnpm add website-auto-updater
 ```typescript
 import WebsiteAutoUpdater from "website-auto-updater";
 
-const updater = new WebsiteAutoUpdater();
+const websiteAutoUpdater = new WebsiteAutoUpdater();
 
-updater.start(() => {
+websiteAutoUpdater.run(() => {
   const result = window.confirm("网站有更新，是否刷新页面？");
   if (result) {
     location.replace(websiteAutoUpdater.getHomeUrl(true));
